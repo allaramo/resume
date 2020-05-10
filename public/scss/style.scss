@@ -1,0 +1,17 @@
+$main-bg-color: #343a40;
+
+$main-ft-color: #FFFFFF;
+$border-radius: 50px;
+
+#main-container{
+    background-color: $main-bg-color;
+    color: $main-ft-color;
+    border-radius: $border-radius;
+    padding: 20px 30px;
+
+}
+
+#bg-container{
+    padding: 50px 100px;
+    
+}
