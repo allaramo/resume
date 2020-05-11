@@ -16,6 +16,7 @@
     <title><?php echo $page; ?></title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">  
+    <script type="text/javascript" src="js/script.js"></script>    
 </head>
 <body>
 <div id="bg-container">

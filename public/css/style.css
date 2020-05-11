@@ -1,3 +1,7 @@
+body {
+  background-image: url("../img/desktop-abstract-wall-dirty.jpg");
+}
+
 #main-container {
   background-color: #343a40;
   color: #FFFFFF;
@@ -7,7 +11,12 @@
 
 #bg-container {
   padding: 50px 100px;
-  background-image: url("../img/desktop-abstract-wall-dirty.jpg");
+  /*background-image: url("../img/desktop-abstract-wall-dirty.jpg");
+  position:absolute; 
+  top:0; 
+  right:0; 
+  bottom:0; 
+  left:0;*/
 }
 
 .logo float:left a {
@@ -58,9 +67,6 @@ hr {
   list-style: none;
   margin: 0;
   padding: 0;
-  /*li:last-child{
-      margin-right:0;
-  }     */
 }
 .site-footer .footer-social-links li {
   display: inline-block;
@@ -76,6 +82,9 @@ hr {
 .site-footer .footer-social-links li a:hover {
   opacity: 1;
 }
+.site-footer .footer-social-links li:last-child {
+  margin-right: 0;
+}
 
 .footer-social {
   float: left;
@@ -88,6 +97,39 @@ hr {
   line-height: 21px;
   font-size: 13px;
   margin: 0;
+  float: right;
+}
+
+#myFace {
+  border-radius: 50%;
+  border: 1vw solid #dfdfdf;
+}
+
+/* styling images on the education page */
+.edu-img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+/* setting a gray background for the education page */
+.gray {
+  background-color: #dfdfdf;
+  border-radius: 20px;
+  padding: 20px;
+  color: #343a40;
+}
+
+/* styling the border for the badges on the skills page */
+.badge-light {
+  border-radius: 20px;
+}
+
+/* styling the images on the work experience page */
+.we-img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

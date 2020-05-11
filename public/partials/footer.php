@@ -4,13 +4,13 @@
                     <div class="col-md-6 col-sm-12 footer-social">
                         <ul class="footer-social-links">
                             <li>
-                                <a href="#" target="_blank">GitHub</a>
+                                <a href="https://github.com/allaramo/" target="_blank">GitHub</a>
                             </li>
                             <li>
-                                <a href="#" target="_blank">LinkedIn</a>
+                                <a href="https://linkedin.com/in/allaramo" target="_blank">LinkedIn</a>
                             </li>
                             <li>
-                                <a href="#" target="_blank">Instagram</a>
+                                <a href="https://instagram.com/allaramo" target="_blank">Instagram</a>
                             </li>
                         </ul>
                     </div>                                
