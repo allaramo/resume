@@ -73,11 +73,10 @@ hr {
   margin-right: 25px;
 }
 .site-footer .footer-social-links li a {
-  color: #fff;
   text-decoration: none;
   line-height: 21px;
   font-size: 13px;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 .site-footer .footer-social-links li a:hover {
   opacity: 1;
@@ -98,11 +97,16 @@ hr {
   font-size: 13px;
   margin: 0;
   float: right;
+  opacity: 0.8;
 }
 
-#myFace {
+#myFace, #loginImg {
   border-radius: 50%;
   border: 1vw solid #dfdfdf;
+}
+
+#loginImg {
+  background-color: white;
 }
 
 /* styling images on the education page */
@@ -130,6 +134,27 @@ hr {
   width: 200px;
   margin: 10px;
   border-radius: 20px;
+}
+
+.login-form {
+  padding: 0% 10% 0% 10%;
+}
+
+.input-group-prepend span {
+  background-color: #343a40;
+}
+
+.text-muted {
+  color: #ce3838 !important;
+  font-weight: 500 !important;
+}
+
+.nav-link:hover {
+  color: #ce3838 !important;
+}
+
+.active {
+  color: #ce3838 !important;
 }
 
 /*# sourceMappingURL=style.css.map */

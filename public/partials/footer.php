@@ -4,18 +4,18 @@
                     <div class="col-md-6 col-sm-12 footer-social">
                         <ul class="footer-social-links">
                             <li>
-                                <a href="https://github.com/allaramo/" target="_blank">GitHub</a>
+                                <a href="https://github.com/allaramo/" target="_blank" class="text-muted">GitHub</a>
                             </li>
                             <li>
-                                <a href="https://linkedin.com/in/allaramo" target="_blank">LinkedIn</a>
+                                <a href="https://linkedin.com/in/allaramo" target="_blank" class="text-muted">LinkedIn</a>
                             </li>
                             <li>
-                                <a href="https://instagram.com/allaramo" target="_blank">Instagram</a>
+                                <a href="https://instagram.com/allaramo" target="_blank" class="text-muted">Instagram</a>
                             </li>
                         </ul>
                     </div>                                
                     <div class="col-md-6 col-sm-12 footer-copyrights">                    
-                        <p>&copy; 2020 All rights reserved. Alan Arango.</p>
+                        <p class="text-muted">&copy; 2020 All rights reserved. Alan Arango.</p>
                     </div>                       
                 </footer>
             </div>

@@ -12,19 +12,19 @@
                 -->
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link" onClick="showHideTab()" href="#!" data-toggle="collapse" data-target="#trazzo">Grupo Trazzo</a>
+                        <a class="nav-link text-muted" onClick="showHideTab()" href="#!" data-toggle="collapse" data-target="#trazzo">Grupo Trazzo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onClick="showHideTab()" href="#!" data-toggle="collapse" data-target="#vantec">Vantec Solutions</a>
+                        <a class="nav-link text-muted" onClick="showHideTab()" href="#!" data-toggle="collapse" data-target="#vantec">Vantec Solutions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onClick="showHideTab()" href="#!" data-toggle="collapse" data-target="#minfin">MINFIN</a>
+                        <a class="nav-link text-muted" onClick="showHideTab()" href="#!" data-toggle="collapse" data-target="#minfin">MINFIN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onClick="showHideTab()" href="#!" data-toggle="collapse" data-target="#archila">Archila Rivera</a>
+                        <a class="nav-link text-muted" onClick="showHideTab()" href="#!" data-toggle="collapse" data-target="#archila">Archila Rivera</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onClick="showHideTab()" href="#!" data-toggle="collapse" data-target="#c27">Canal 27</a>
+                        <a class="nav-link text-muted" onClick="showHideTab()" href="#!" data-toggle="collapse" data-target="#c27">Canal 27</a>
                     </li>
                 </ul>                         
             </div>                    

@@ -82,12 +82,11 @@ hr{
         li{
             display:inline-block;
             margin-right:25px;
-            a{
-                color:#fff;
+            a{                
                 text-decoration:none;
                 line-height:21px;
                 font-size:13px;
-                opacity:.6;
+                opacity:.8;
             }
             a:hover{
                 opacity:1;
@@ -112,6 +111,7 @@ hr{
         margin:0;
         //display:inline-block;
         float:right;
+        opacity:.8;
     }
 }
 
@@ -119,6 +119,11 @@ hr{
     border-radius:50%;    
     border: 1vw solid #dfdfdf;
     
+}
+
+#loginImg{
+    @extend #myFace;
+    background-color: white;
 }
 
 /* styling images on the education page */
@@ -146,4 +151,25 @@ hr{
     width: 200px;
     margin: 10px;
     border-radius: 20px;
+}
+
+.login-form{
+    padding:0% 10% 0% 10%;
+}
+
+.input-group-prepend span{
+    background-color: $main-bg-color;
+}
+
+.text-muted{
+    color:rgb(206, 56, 56) !important;
+    font-weight: 500 !important;
+}
+
+.nav-link:hover{
+    color:rgb(206, 56, 56) !important;
+}
+
+.active{
+    color:rgb(206, 56, 56) !important;
 }

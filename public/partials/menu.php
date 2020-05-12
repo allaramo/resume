@@ -1,4 +1,17 @@
 <?php
+
+    // Initialize the session
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+    
+    // Check if the user is already logged in, if yes then redirect him to welcome page
+    if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+        $buttonMenu = "Logout";    
+    } else {
+        $buttonMenu = "Login";
+    }
+
     $menuArray = array(
         "index"=>"Home",
         "education"=>"Education",
@@ -46,5 +59,6 @@
                         }
                     ?>            
                 </ul>
+                <a href="<?php echo $buttonMenu; ?>.php"><button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><?php echo $buttonMenu; ?></button></a>                
             </div>
         </nav>
