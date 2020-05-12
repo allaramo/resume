@@ -1,6 +1,7 @@
 <?php 
-    $page="Work Experience";    
+    $page="Work";    
     require_once("partials/menu.php"); 
+    include("../private/session.php");
 ?>   
           
     <div class="container">

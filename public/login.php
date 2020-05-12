@@ -15,6 +15,11 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
   exit;
 }
 
+$lastPage = "";
+if(isset($_GET['page'])) {
+    $lastPage = "?page=" . strtolower($_GET['page']);                                   
+}
+
 
 $registered = (isset($_GET['status']))? true : false;
 
@@ -67,7 +72,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
                             // Password is correct, so start a new session
-                            session_start();
+                            if (session_status() == PHP_SESSION_NONE) {
+                                session_start();
+                            }
                             
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
@@ -75,7 +82,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;                                                       
                             
                             // Redirect user to welcome page
-                            header("location: index.php");
+                            if($lastPage=="") {                                
+                                header("location: index.php");                                
+                            }else{
+                                header("location: " . strtolower($_GET['page']) . ".php");   
+                            }
+                            
+                            
+                            
                         } else{
                             // Display an error message if password is not valid
                             $password_err = "The password you entered was not valid.";
@@ -110,7 +124,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <br><br><br>                
                 <h2>Login</h2>
                 <span ><?php if($registered){ echo "User registered succesfully!"; }  ?></span>  
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
+                <form action="<?php echo htmlspecialchars("login.php" . $lastPage); ?>" method="post"> 
                     <span class="text-muted"><?php echo $username_err; ?></span>                       
                     <div class="input-group form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                         <div class="input-group-prepend">

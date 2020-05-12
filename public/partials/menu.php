@@ -17,7 +17,7 @@
         "education"=>"Education",
         "work"=>"Work Experience",
         "skills"=>"Skills",
-        "interests"=>"Interests"
+        "hrdb"=>"Human Resources DB"
     );
 ?>
 
@@ -59,6 +59,6 @@
                         }
                     ?>            
                 </ul>
-                <a href="<?php echo $buttonMenu; ?>.php"><button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><?php echo $buttonMenu; ?></button></a>                
+                <a href="<?php echo strtolower($buttonMenu); ?>.php"><button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><?php echo $buttonMenu; ?></button></a>                
             </div>
         </nav>

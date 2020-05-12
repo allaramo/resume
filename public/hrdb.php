@@ -1,5 +1,5 @@
 <?php 
-    $page="Interests";    
+    $page="HumanResourcesDB";    
     require_once("partials/menu.php"); 
 ?>   
           

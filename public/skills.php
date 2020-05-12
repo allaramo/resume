@@ -1,6 +1,7 @@
 <?php 
     $page="Skills";    
     require_once("partials/menu.php"); 
+    include("../private/session.php");
 ?>   
           
 <!--
