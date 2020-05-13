@@ -2,6 +2,7 @@
     $page="departments";    
     require_once("../partials/menu.php"); 
     include("../../private/session.php");
+    $path = (getcwd()=="departments") ? "" : '/departments/';
 ?>   
 <br><br>
 
@@ -14,8 +15,8 @@
                     <input type="text" class="form-control" name="search" placeholder="Search...">
                     <span class="input-group-addon">                    
                         <button class="btn btn-info"><i class="fa fa-search"></i> </button>
-                    </span> 
-                    <?php $path = (getcwd()=="departments") ? "" : '/departments/';?>                
+                    </span>
+                                   
                     <a class="btn btn-info" href="<?php echo $path ?>index.php"><i class="fa fa-refresh"></i></a>
                     <a class="btn btn-success" href="<?php echo $path ?>new.php"><i class="fa fa-plus"></i> New Department</a>   
                 </div>                 
@@ -37,7 +38,7 @@
 
         ?>
         <table class="table table-striped table-light">
-            <thead class="thesssad-light">
+            <thead>
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Name</th>
@@ -53,13 +54,13 @@
                         <th scope='row'><?php echo $row["dept_no"]; ?></th>
                         <td><?php echo $row["dept_name"]; ?></td>
                         <td class="text-right">
-                            <a class="btn btn-info" href='view.php?dept_no="<?php echo $row["dept_no"]; ?>"'>
+                            <a class="btn btn-info" href='<?php echo $path; ?>view.php?dept_no=<?php echo $row["dept_no"]; ?>'>
                                 <i class="fa fa-eye"></i>    
                             </a>
-                            <a class="btn btn-warning" href='edit.php?dept_no="<?php echo $row["dept_no"]; ?>"'>
+                            <a class="btn btn-warning" href='<?php echo $path; ?>edit.php?dept_no=<?php echo $row["dept_no"]; ?>'>
                                 <i class="fa fa-pencil"></i>    
                             </a>
-                            <a class="btn btn-danger" href='delete.php?dept_no="<?php echo $row["dept_no"]; ?>"'>
+                            <a class="btn btn-danger" href='<?php echo $path; ?>delete.php?dept_no=<?php echo $row["dept_no"]; ?>' onclick="return confirm('Está seguro de eliminar: <?php echo $row['dept_name']; ?> ?');">
                                 <i class="fa fa-trash"></i>    
                             </a>
                         </td>                        
