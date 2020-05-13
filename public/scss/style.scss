@@ -173,3 +173,21 @@ hr{
 .active{
     color:rgb(206, 56, 56) !important;
 }
+
+td{
+    a{
+        margin: 0px 5px 0px 5px;
+        i{
+            color: $main-bg-color;    
+        }
+    }
+}
+
+.searchInput{
+    display:inline-block !important;
+    a {
+        margin-left: 5px;
+    }  
+}
+
+

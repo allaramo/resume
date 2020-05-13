@@ -17,7 +17,7 @@
         "education"=>"Education",
         "work"=>"Work Experience",
         "skills"=>"Skills",
-        "hrdb"=>"Human Resources DB"
+        "hrdb"=>"Database Review"
     );
 ?>
 
@@ -27,9 +27,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $page; ?></title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">  
-    <script type="text/javascript" src="js/script.js"></script>    
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"> 
+    <script type="text/javascript" src="../js/script.js"></script>    
 </head>
 <body>
 <div id="bg-container">
@@ -50,7 +51,7 @@
                 <ul class="navbar-nav ml-auto">
                     <?php            
                         foreach($menuArray as $key =>$title){
-                            $link = '<a href="'.$key.'.php" class="nav-item nav-link ';
+                            $link = '<a href="../'.$key.'.php" class="nav-item nav-link ';
                             if($page==$title){
                                 $link = $link . "active";
                             }
@@ -59,6 +60,7 @@
                         }
                     ?>            
                 </ul>
-                <a href="<?php echo strtolower($buttonMenu); ?>.php"><button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><?php echo $buttonMenu; ?></button></a>                
+                <?php $path = (getcwd()=="login") ? "" : '/login/';?>
+                <a href="<?php echo $path . strtolower($buttonMenu); ?>.php"><button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><?php echo $buttonMenu; ?></button></a>                
             </div>
         </nav>

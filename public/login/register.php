@@ -1,11 +1,11 @@
 <?php 
     $page="Register";    
-    require_once("partials/menu.php"); 
+    require_once("../partials/menu.php"); 
 ?>
 
 <?php
 // Include config file
-require_once("../private/config.php");
+require_once("../../private/config.php");
  
 // Define variables and initialize with empty values
 $username = $password = $confirm_password = "";
@@ -102,7 +102,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="row">
             <div class="col-md-4 col-sm-12 align-middle text-right">
                 <br><br><br>
-                <img src="img/user_profile.png" style="max-height:250px;" alt="Login" id="loginImg" class="img-fluid">
+                <img src="../img/user_profile.png" style="max-height:250px;" alt="Login" id="loginImg" class="img-fluid">
                 <br>
             </div> 
             <div class="col-md-8 col-sm-12 align-middle login-form">
@@ -113,7 +113,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <div class="input-group form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                         <div class="input-group-prepend">
                             <span class="input-group-text">
-                                <img src="img/ico_user.png" alt="Username">
+                                <img src="../img/ico_user.png" alt="Username">
                             </span>
                         </div>                        
                         <input class="form-control" type="text" name="username" placeholder="username" value="<?php echo $username; ?>"> 
@@ -122,7 +122,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <div class="input-group form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                         <div class="input-group-prepend">
                             <span class="input-group-text">
-                                <img src="img/ico_password.png" alt="Password">
+                                <img src="../img/ico_password.png" alt="Password">
                             </span>
                         </div>                        
                         <input class="form-control" type="password" name="password" placeholder="password" value="<?php echo $password; ?>">
@@ -131,7 +131,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <div class="input-group form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
                         <div class="input-group-prepend">
                             <span class="input-group-text">
-                                <img src="img/ico_password.png" alt="Confirm Password">
+                                <img src="../img/ico_password.png" alt="Confirm Password">
                             </span>
                         </div>                        
                         <input class="form-control" type="password" name="confirm_password" placeholder="confirm password" value="<?php echo $confirm_password; ?>">
@@ -147,5 +147,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div>
         
 <?php 
-    require_once("partials/footer.php"); 
+    require_once("../partials/footer.php"); 
 ?>       

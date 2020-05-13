@@ -2,7 +2,7 @@
    include('config.php');    
    
    if(!isset($_SESSION['loggedin'])){      
-      header("Location:login.php?page=" . strtolower($page)); 
+      header("Location:login/login.php?page=" . strtolower($page)); 
       die();
    }
 ?>

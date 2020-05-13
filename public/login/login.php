@@ -1,6 +1,6 @@
 <?php 
     $page="Login";    
-    require_once("partials/menu.php"); 
+    require_once("../partials/menu.php"); 
 ?>   
 
 <?php
@@ -25,7 +25,7 @@ $registered = (isset($_GET['status']))? true : false;
 
  
 // Include config file
-require_once("../private/config.php");
+require_once("../../private/config.php");
  
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -83,9 +83,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             
                             // Redirect user to welcome page
                             if($lastPage=="") {                                
-                                header("location: index.php");                                
+                                header("location: ../index.php");                                
                             }else{
-                                header("location: " . strtolower($_GET['page']) . ".php");   
+                                header("location: ../" . strtolower($_GET['page']) . ".php");   
                             }
                             
                             
@@ -117,7 +117,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="row">
             <div class="col-md-4 col-sm-12 align-middle text-right">
                 <br><br><br>
-                <img src="img/user_profile.png" style="max-height:250px;" alt="Login" id="loginImg" class="img-fluid">
+                <img src="../img/user_profile.png" style="max-height:250px;" alt="Login" id="loginImg" class="img-fluid">
                 <br>
             </div> 
             <div class="col-md-8 col-sm-12 align-middle login-form">
@@ -129,7 +129,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <div class="input-group form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                         <div class="input-group-prepend">
                             <span class="input-group-text">
-                                <img src="img/ico_user.png" alt="Username">
+                                <img src="../img/ico_user.png" alt="Username">
                             </span>
                         </div>                        
                         <input class="form-control" type="text" name="username" placeholder="username">   
@@ -138,7 +138,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <div class="input-group form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                         <div class="input-group-prepend">
                             <span class="input-group-text">
-                                <img src="img/ico_password.png" alt="Password">
+                                <img src="../img/ico_password.png" alt="Password">
                             </span>
                         </div>                        
                         <input class="form-control" type="password" name="password" placeholder="password">   
@@ -154,5 +154,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div>
         
 <?php 
-    require_once("partials/footer.php"); 
+    require_once("../partials/footer.php"); 
 ?>       

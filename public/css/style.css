@@ -157,4 +157,18 @@ hr {
   color: #ce3838 !important;
 }
 
+td a {
+  margin: 0px 5px 0px 5px;
+}
+td a i {
+  color: #343a40;
+}
+
+.searchInput {
+  display: inline-block !important;
+}
+.searchInput a {
+  margin-left: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */
