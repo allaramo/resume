@@ -19,10 +19,9 @@ USE `employees` ;
 -- -----------------------------------------------------
 -- Table `employees`.`users`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `employees`.`users` (
-  `id` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `employees`.`users` (  
   `username` VARCHAR(50) NOT NULL,
   `password` VARCHAR(255) NOT NULL,
   `created_at` DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `username` (`username` ASC) VISIBLE);
+  PRIMARY KEY (`username`),
+);
