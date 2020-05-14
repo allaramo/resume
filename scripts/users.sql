@@ -26,5 +26,3 @@ CREATE TABLE IF NOT EXISTS `employees`.`users` (
   `created_at` DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `username` (`username` ASC) VISIBLE);
-
-
