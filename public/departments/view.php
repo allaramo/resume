@@ -17,10 +17,10 @@
     <div class="row">
         <h1 class="col-lg-4 col-md-12">Department <?php echo $id; ?></h1>
         <div class="col-lg-8 col-md-12 mt-2 text-right">            
-            <?php $path = (getcwd()=="departments") ? "" : '/departments/';?>  
+            <?php $path = (basename(__DIR__)=="departments") ? "" : '/departments/';?>  
             <a class="btn btn-info" href="<?php echo $path ?>index.php"><i class="fa fa-undo"></i> Return</a>              
             <a class="btn btn-warning" href="<?php echo $path ?>edit.php?dept_no=<?php echo $id; ?>"><i class="fa fa-pencil"></i> Edit</a>
-            <a class="btn btn-danger" href="<?php echo $path ?>delete.php?dept_no=<?php echo $id; ?>"><i class="fa fa-trash"></i> Delete</a>
+            <a class="btn btn-danger" href="<?php echo $path ?>delete.php?dept_no=<?php echo $id; ?>" onclick="return confirm('Está seguro de eliminar el dato ?');"><i class="fa fa-trash"></i> Delete</a>
         </div>     
     </div>
     <div class="row mr-0 ml-0">

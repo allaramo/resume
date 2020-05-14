@@ -2,7 +2,7 @@
     $page="departments";    
     require_once("../partials/menu.php"); 
     include("../../private/session.php");
-    $path = (getcwd()=="departments") ? "" : '/departments/';
+    $path = (basename(__DIR__)=="departments") ? "" : '/departments/';
     $department_err = '';
     // Processing form data when form is submitted
 

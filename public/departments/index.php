@@ -2,7 +2,9 @@
     $page="departments";    
     require_once("../partials/menu.php"); 
     include("../../private/session.php");
-    $path = (getcwd()=="departments") ? "" : '/departments/';
+    
+    $path = "/" . basename(__DIR__) . "/";
+    
 ?>   
 <br><br>
 
@@ -10,7 +12,7 @@
     <div class="row">
         <h1 class="col-lg-4 col-md-12">Departments</h1>
         <div class="col-lg-8 col-md-12 mt-2 text-right">
-            <form action="<?php echo htmlspecialchars("index.php"); ?>" class="searchInput" method="get">
+            <form action="<?php echo htmlspecialchars($path . "index.php"); ?>" class="searchInput" method="get">
                 <div class="input-group">
                     <input type="text" class="form-control" name="search" placeholder="Search...">
                     <span class="input-group-addon">                    
