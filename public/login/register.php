@@ -1,9 +1,8 @@
 <?php 
+    ob_start();
     $page="Register";    
     require_once("../partials/menu.php"); 
-?>
 
-<?php
 // Include config file
 require_once("../../private/config.php");
  
@@ -19,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username_err = "Please enter a username.";
     } else{
         // Prepare a select statement
-        $sql = "SELECT id FROM users WHERE username = ?";
+        $sql = "SELECT username FROM users WHERE username = ?";
         
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -148,4 +147,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         
 <?php 
     require_once("../partials/footer.php"); 
+    ob_end_flush();
 ?>       

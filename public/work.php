@@ -1,4 +1,5 @@
 <?php 
+    ob_start();
     $page="Work";    
     require_once("partials/menu.php"); 
     include("../private/session.php");
@@ -155,5 +156,6 @@
     </div>
         
 <?php 
-    require_once("partials/footer.php"); 
+    require_once("partials/footer.php");
+    ob_end_flush(); 
 ?>       

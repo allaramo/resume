@@ -1,4 +1,5 @@
 <?php 
+    ob_start();
     $page="Home";    
     require_once("partials/menu.php"); 
 ?>   
@@ -26,4 +27,5 @@
         
 <?php 
     require_once("partials/footer.php"); 
+    ob_end_flush();
 ?>       

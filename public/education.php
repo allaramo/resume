@@ -1,4 +1,5 @@
 <?php 
+    ob_start();
     $page="Education";  
     require_once("partials/menu.php"); 
     include("../private/session.php"); 
@@ -65,4 +66,5 @@
         
 <?php 
     require_once("partials/footer.php"); 
+    ob_end_flush();
 ?>       

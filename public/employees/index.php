@@ -21,7 +21,8 @@
     if(isset($_GET['search'])) {
         if($_GET['search']!=""){      
             $searching = strtolower($_GET['search']);
-            if(is_int((int)$searching)){         
+            $intString = (int) $searching;            
+            if($intString!=0 && $searching!="0"){         
                 $sql = $sql . " WHERE emp_no = " . $searching;
                 $sql = $sql . " OR dept_no LIKE '%" . $searching . "%'";
             } else {
@@ -29,7 +30,7 @@
             }
         }
     }
-        
+      
     $result = mysqli_query($link, $sql);
     
     if (mysqli_num_rows($result)>0) {
@@ -68,7 +69,8 @@
             if(isset($_GET['search'])) {
                 if($_GET['search']!=""){      
                     $searching = strtolower($_GET['search']);
-                    if(is_int((int)$searching)){         
+                    $intString = (int) $searching;            
+                    if($intString!=0 && $searching!="0"){         
                         $sql = $sql . " WHERE emp_no = " . $searching;
                         $sql = $sql . " OR dept_no LIKE '%" . $searching . "%'";
                     } else {
@@ -77,7 +79,7 @@
                 }
             }
             $sql = $sql . " ORDER BY emp_no, dept_no LIMIT " . $offset ."," . $no_of_records_per_page;
-            
+            //echo $sql;
             $result = mysqli_query($link, $sql);
             
             if (mysqli_num_rows($result)>0) {

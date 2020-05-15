@@ -1,4 +1,5 @@
 <?php
+ob_start();
 // Initialize the session
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -13,4 +14,5 @@ session_destroy();
 // Redirect to login page
 header("location: login.php");
 exit;
+ob_end_flush();
 ?>
