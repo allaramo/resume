@@ -1,7 +1,7 @@
 <?php 
-    $page="Education";    
+    $page="Education";   
+    include("../private/session.php"); 
     require_once("partials/menu.php"); 
-    include("../private/session.php");
 ?>   
           
     <br><br>
