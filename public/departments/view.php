@@ -21,7 +21,7 @@
             <?php $path = (basename(__DIR__)=="departments") ? "" : '/departments/';?>  
             <a class="btn btn-info" href="<?php echo $path ?>index.php"><i class="fa fa-undo"></i> Return</a>              
             <a class="btn btn-warning" href="<?php echo $path ?>edit.php?dept_no=<?php echo $id; ?>"><i class="fa fa-pencil"></i> Edit</a>
-            <a class="btn btn-danger" href="<?php echo $path ?>delete.php?dept_no=<?php echo $id; ?>" onclick="return confirm('Está seguro de eliminar el dato ?');"><i class="fa fa-trash"></i> Delete</a>
+            <a class="btn btn-danger" href="<?php echo $path ?>delete.php?dept_no=<?php echo $id; ?>" onclick="return confirm('Are you sure you want to delete this record ?');"><i class="fa fa-trash"></i> Delete</a>
         </div>     
     </div>
     <div class="row mr-0 ml-0">
