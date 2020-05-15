@@ -78,11 +78,11 @@
         <form action="<?php echo htmlspecialchars("new.php"); ?>" method="post">
             <div class="form-group">
                 <label for="dept_no">Department Number</label>    
-                <input type="text" class="form-control" name="dept_no" id="dept_no" placeholder="Department Number">
+                <input maxlength="4" type="text" class="form-control" name="dept_no" id="dept_no" placeholder="Department Number">
             </div>
             <div class="form-group">
                 <label for="dept_name">Department Name</label>    
-                <input type="text" class="form-control" name="dept_name" id="dept_name" placeholder="Department Name">
+                <input maxlength="40" type="text" class="form-control" name="dept_name" id="dept_name" placeholder="Department Name">
             </div> 
             <button class="btn btn-success"><i class="fa fa-save"></i> Save</button>  
             <a class="btn btn-danger" href="index.php"><i class="fa fa-undo"></i> Cancel</a>       
