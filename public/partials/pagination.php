@@ -1,5 +1,6 @@
 <?php 
-
+//if the var pages set on employees is greater than 0 means that the query has returned results
+//then creates the pagination using the var current that is the actual page of pagination that the user is checking
 if ($pages > 0) { ?>
     <ul class="pagination">
         <?php if ($current == 1) { ?>

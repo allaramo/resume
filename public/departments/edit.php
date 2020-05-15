@@ -22,6 +22,7 @@
        // header("location: index.php");
     }
 
+    //if there is a post it means it is saving the data
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         
         // Validate Department

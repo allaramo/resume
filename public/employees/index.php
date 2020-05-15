@@ -1,28 +1,37 @@
 <?php 
     ob_start();
-    $page="employees";    
+    $page="employees"; 
+    //requiring the menu and checking the session   
     require_once("../partials/menu.php"); 
     include("../../private/session.php");
+    //setting the path using the name of the directory
     $path = "/" . basename(__DIR__) . "/";
 
 
     //Pagination code sourced from
     //https://www.myprogrammingtutorials.com/create-pagination-with-php-and-mysql.html
+    
+    //check if there is a parameter for the current page, if not set it to 1st page
     if (isset($_GET['page'])) {
         $current = (int)$_GET['page'];
     } else {
         $current = 1;
     }
 
+    //I want 10 records per page
     $no_of_records_per_page = 10;
+    //setting offset that is going to be used for the query
     $offset = ($current-1) * $no_of_records_per_page;
     
+    //counting rows 
     $sql = "SELECT count(*) FROM dept_emp";
     $searching = ""; 
+    //if I have a parameter of a keyword that is being searched it adds it to the query
     if(isset($_GET['search'])) {
         if($_GET['search']!=""){      
             $searching = strtolower($_GET['search']);
-            $intString = (int) $searching;            
+            $intString = (int) $searching; 
+            //this allows to search the keyword as a number for the employee or as a string for the department           
             if($intString!=0 && $searching!="0"){         
                 $sql = $sql . " WHERE emp_no = " . $searching;
                 $sql = $sql . " OR dept_no LIKE '%" . $searching . "%'";
@@ -35,11 +44,13 @@
     $result = mysqli_query($link, $sql);
     
     if (mysqli_num_rows($result)>0) {
+        //counting total of rows
         $total_rows = mysqli_fetch_array($result)[0];
-        
+        //counting total of pages needed
         $pages = ceil($total_rows / $no_of_records_per_page);
         
     } else{
+        //setting to 0 if none
         $total_rows = $pages = 0;
     }
     //end of pagination code
@@ -66,6 +77,7 @@
     </div>
     <div class="row mr-0 ml-0">
         <?php
+            //creating the query with the keyword that is being searched (if there is one)
             $sql = "SELECT emp_no, dept_no, from_date, to_date FROM dept_emp";
             if(isset($_GET['search'])) {
                 if($_GET['search']!=""){      
@@ -82,7 +94,7 @@
             $sql = $sql . " ORDER BY emp_no, dept_no LIMIT " . $offset ."," . $no_of_records_per_page;
             //echo $sql;
             $result = mysqli_query($link, $sql);
-            
+            //if there are rows it creates the table
             if (mysqli_num_rows($result)>0) {
                 
                 
@@ -114,18 +126,21 @@
         </table>
                 <?php
                     } else {
+                        //if there is no rows echoes this text
                         echo "<p class='text-muted'>0 results</p>";
                     }
-                    // close connection
+                    // closing the connection
                     $link->close();
                 ?>
     </div>
     <?php
+        //requires the pagination structure
         require_once("../partials/pagination.php"); 
     ?>
 </div>    
         
 <?php 
+    //requires the footer
     require_once("../partials/footer.php"); 
     ob_end_flush();
 ?>

@@ -1,17 +1,18 @@
 <?php
 
-    // Initialize the session
+    // Initialize the session in case there is none
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
     }
     
-    // Check if the user is already logged in, if yes then redirect him to welcome page
+    // Check if the user is already logged in, if yes then this var will switch the text and link of the button (login/logout)
     if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
         $buttonMenu = "Logout";    
     } else {
         $buttonMenu = "Login";
     }
 
+    //setting an array to store the name of the pages in the menu, used to create the links
     $menuArray = array(
         "index"=>"Home",
         "education"=>"Education",
@@ -49,7 +50,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navCollapse">
                 <ul class="navbar-nav ml-auto">
-                    <?php            
+                    <?php    
+                        //creating the menu using the array.        
                         foreach($menuArray as $key =>$title){
                             $link = '<a href="../'.$key.'.php" class="nav-item nav-link ';
                             if($page==$title){

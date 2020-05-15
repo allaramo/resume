@@ -1,9 +1,10 @@
 <?php 
     ob_start();
     $page="departments";    
+    //requiring the menu and checking the session
     require_once("../partials/menu.php"); 
     include("../../private/session.php");
-    
+    //setting the path using the name of the directory
     $path = "/" . basename(__DIR__) . "/";
     
 ?>   
@@ -28,6 +29,7 @@
     </div>
     <div class="row mr-0 ml-0">
         <?php
+            //creating the query with the keyword searched (if any)
             $sql = "SELECT dept_no, dept_name FROM departments";
             if(isset($_GET['search'])) {                        
                 $sql = $sql . " WHERE dept_no LIKE '%" . strtolower($_GET['search']) . "%'";
@@ -36,7 +38,7 @@
             $sql = $sql . " ORDER BY dept_no";
             
             $result = mysqli_query($link, $sql);
-            
+            //creates the table if there are rows
             if (mysqli_num_rows($result)>0) {
 
         ?>
@@ -75,9 +77,10 @@
         </table>
                 <?php
                     } else {
+                        //prints this text in case of no rows
                         echo "<p class='text-muted'>0 results</p>";
                     }
-                    // close connection
+                    // closing connection
                     $link->close();
                 ?>
     </div>    
