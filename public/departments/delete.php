@@ -1,4 +1,5 @@
 <?php 
+    ob_start();
     $page="departments";    
     require_once("../partials/menu.php"); 
     include("../../private/session.php");
@@ -19,4 +20,5 @@
     } else {
         header("Location:index.php"); 
     }
+    ob_end_flush();
 ?>   
